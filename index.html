@@ -1,1 +1,104 @@
-<h1> DOM Play </h1>
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="utf-8"/>
+            <style>
+                
+                html {background-color:rgb(204, 255, 255);}
+
+                h1 {text-align: center;}
+
+                #assignment {text-align: center;}
+
+                p {text-align: center;}
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+            </style>
+    </head>
+<body>
+<h1>DOM Play</h1>
+<p id="assignment">An IT121 assignment by Oscar Mel Domingo.</p>
+<h1>Scene: Fogell gets fake ID</h1>
+
+<img src="https://www.ladbible.com/cdn-cgi/image/width=720,quality=70,format=jpeg,fit=pad,dpr=1/https%3A%2F%2Fs3-images.ladbible.com%2Fs3%2Fcontent%2Fcbb672155cf5bbbd23941f84f82e2509.png" width=500 alt="McLovin">
+
+
+<div id="play">
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Yo guys! Sup?</span></p> 
+    <p><span data-actor="seth"><strong>Seth:</strong> Fogell, where have you been, man? You almost gave me a goddamn heart attack. Let me see it. Did you chicken out or what?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> No noooo, man. I got it; it is flawless. Check it!?</span></p> 
+    <p><span data-actor="evan"><strong>Evan:</strong> [examining the fake ID]  Hawaii. All right, that's good. That's hard to trace, I guess. Wait... you changed your name to... McLovin?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Yeah.</span></p> 
+    <p><span data-actor="evan"><strong>Evan:</strong> McLovin? What kind of a stupid name is that, Fogell? What, are you trying to be an Irish R&B singer?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Naw, they let you pick any name you want when you get down there.</span></p> 
+    <p><span data-actor="seth"><strong>Seth:</strong> And you landed on McLovin...</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Yeah. It was between that or Muhammed.</span></p> 
+    <p><span data-actor="seth"><strong>Seth:</strong> Why would it be between THAT or Muhammed? Why don't you just pick a common name like a normal person?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Muhammed is the most commonly used name on Earth. Read a book for once.</span></p> 
+    <p><span data-actor="evan"><strong>Evan:</strong> Fogell, have you actually ever met anyone named Muhammed?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Have YOU actually ever met anyone named McLovin?</span></p> 
+    <p><span data-actor="seth"><strong>Seth:</strong> No, that's why you picked a dumb name!</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> **** you.</span></p> 
+    <p><span data-actor="seth"><strong>Seth:</strong> Fogell, this ID says that you're 25 years old. Why wouldn't you just put 21, man?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> Seth, Seth, Seth. Listen up, every day, hundreds of kids go into the liquor store with their fake IDs,
+        <br> and every single one says they're 21. Pssh, how many 21 year olds do you think there are in this town? It's called strategy, all right?</span></p> 
+    <p><span data-actor="evan"><strong>Evan:</strong> Stay calm, okay? Let's not lose our heads. It's... it's a fine ID; it'll... it's gonna work. 
+        <br> It's passable, okay? This isn't terrible. I mean, it's up to you, Fogell. This guy is either gonna think 'Here's another kid with a fake ID'
+        <br> or 'Here's McLovin, a 25 year-old Hawaiian organ donor'. Okay? So what's it gonna be?</span></p> 
+    <p><span data-actor="fogell"><strong>Fogell:</strong> [grinning]  ... I am McLovin!</span></p> 
+    <p><span data-actor="seth"><strong>Seth:</strong> No you're not. No one's McLovin. McLovin's never existed because that's a 
+        <br> made up dumb FAIRY TALE NAME!</span></p> 
+    
+
+
+</div>
+<script>
+
+//we're using the CSS descendent selector to access the spans
+    const spans = document.querySelectorAll('div#play span');
+    console.log(spans);
+
+    for(const mySpan of spans){
+        mySpan.addEventListener("click",function(ev){
+            //alert(mySpan.dataset.actor);
+            highlightActor(mySpan.dataset.actor);
+   
+    
+    
+    
+           
+    });
+}
+
+
+    function highlightActor(myActor){
+
+        for(const mySpan of spans){
+            if(myActor == mySpan.dataset.actor){
+            mySpan.style.backgroundColor = '#ffffb3';
+        }else{
+            mySpan.style.backgroundColor = '#e6ffff';     
+        }
+        }
+
+
+
+
+
+
+
+        }
+        
+</script>
+</body>
+
+
+
+</html>
